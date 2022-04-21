@@ -1,4 +1,4 @@
-# require_relative 'bike'
+require_relative 'bike'
 
 class DockingStation
   attr_reader :bike
@@ -8,7 +8,12 @@ class DockingStation
   end
 
   def release_bike
-   Bike.new
+    fail 'No bikes available' unless @bike
+    @bike
+  end
+
+  def station(bike)
+    @bike = bike
   end
 
 end
