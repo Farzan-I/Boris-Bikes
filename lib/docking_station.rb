@@ -17,3 +17,5 @@ class DockingStation
   end
 
 end
+
+# try to see why line 11 fails
